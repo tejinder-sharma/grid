@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+:root {
+  --main-moderate-violet: hsl(263, 55%, 52%);
+  --main-very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --main-very-dark-blackish-blue: hsl(219, 29%, 14%);
+  --main-white: hsl(0, 0%, 100%);
+  --main-light-gray: hsl(0, 0%, 81%);
+  --light-grayish-blue: hsl(210, 46%, 95%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  line-height: 1.4;
+  background-color: #ddd6fe;
+  padding: 2rem;
+}
+.container{
+    max-width: 1500px;
+    margin: 2rem auto;
+}
+.profile{
+    display: flex;
+    align-items: center;
+}
+img{
+    width: 3rem;
+    border-radius: 100%;
+}
+.profile-desc{
+    margin-left: 1rem;
+}
+.profile-position{
+    font-size: 0.9rem;
+}
+.item-heading{
+    margin: 1rem 0;
+    font-size: 1.2rem;
+}
+.item{
+    padding: 2rem;
+    border-radius: 0.5rem;
+}
+.one{
+    background-color: var(--main-moderate-violet);
+    color: var(--main-white);
+    background-image: url(./images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: 80% 10%;
+    
+}
+.two{
+    background-color: var(--main-very-dark-grayish-blue);
+    color: var(--main-white);
+}
+.three, .five{
+    background-color: var(--main-white);
+}
+.four{
+    background-color: var(--main-very-dark-blackish-blue);
+    color: var(--main-white);
+}
+.container{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+@media screen and (min-width: 767px) {
+    .container{
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .one{
+        grid-row: 1;
+        grid-column: 1 / span 2;
+    }
+    .two{
+        grid-row: 1;
+        grid-column: 3 / span 2;
+    }
+    .three{
+        grid-row: 2;
+        grid-column: 1 / span 2;
+    }
+    .four{
+        grid-row: 2;
+        grid-column: 3 / span 2;
+    }
+    .five{
+        grid-row: 3;
+        grid-column: 1 / span 4;
+    } 
+}
+@media screen and (min-width: 1024px) {
+    .container{
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .one{
+        grid-row: 1;
+        grid-column: 1 / span 2;
+    }
+    .five{
+        grid-column: 4;
+        grid-row: 1 / span 2;
+    }
+    .three{
+        grid-row: 2 / span 1;
+        grid-column: 1 / span 1;
+    }
+    .four{
+        grid-column: 2 / span 2;
+    }
+    .two{
+        grid-row: 1;
+        grid-column: 3 / span 1;
+    }
+}
